@@ -1,19 +1,15 @@
-<img src="https://imgur.com/a/rxgMOmi" width="100%" />
+<img src="https://raw.githubusercontent.com/zaweb/Roll20-sheets/master/HU.png" width="100%" />
 <h6 class="sheet-SectionHeader">Character Overview</h6>
 <header>
   <h5 class="sheet-CharacterOverview">
     Name:
     <input style="width:15%;" type="text" name="attr_Name" />
-    Gender:
-    <input style="width:10%;" type="text" name="attr_Gender" />
+    Real Name:
+    <input style="width:15%;" type="text" name="attr_RealName" />
     OCC:
-    <input style="width:10%;" type="text" name="attr_OCC" />
+    <input style="width:15%;" type="text" name="attr_OCC" />
     Level:
     <input style="width:3%;" type="number" name="attr_Level" value=1>
-    XP:
-    <input style="width:5%;" type="number" name="attr_XP">
-    Next Level:
-    <input style="width:5%;" type="number" name="attr_XP_max">
     Alignment:
     <input style="width:10%;" type="text" name="attr_Alignment" />
   </h5>
@@ -108,7 +104,7 @@
               <input float="left" type="text" style="width:60%;" name="attr_OCCSK"><input float="left" type="number"
                 style="width:13%;" name="attr_OCCSKP" value=0><input float="left" type="number" style="width:13%;"
                 name="attr_OCCSKPL" value=0><input float="left" type="text" style="width:14%;" name="attr_OCCT"
-                value="@{OCCSKP}+(@{OCCSKPL}*(@{Level}-1))+@{IQmax}" disabled="true">
+                value=0>
             </fieldset>
           </tr>
         </table>
@@ -129,7 +125,7 @@
               <input float="left" type="text" style="width:60%;" name="attr_OCRCSK"><input float="left" type="number"
                 style="width:13%;" name="attr_OCRCSKP" value=0><input float="left" type="number" style="width:13%;"
                 name="attr_OCRCSKPL" value=0><input float="left" type="text" style="width:14%;" name="attr_OCRCT"
-                value="@{OCRCSKP}+(@{OCRCSKPL}*(@{Level}-1))+@{IQmax}" disabled="true">
+                value=0>
             </fieldset>
           </tr>
         </table>
@@ -150,7 +146,7 @@
               <input float="left" type="text" style="width:60%;" name="attr_SECSK"><input float="left" type="number"
                 style="width:13%;" name="attr_SECSKp" value=0><input float="left" type="number" style="width:13%;"
                 name="attr_SECSKpl" value=0><input float="left" type="text" style="width:14%;" name="attr_SECT"
-                value="@{SECSKp}+(@{SECSKpl}*(@{Level}-1))+@{IQmax}" disabled="true">
+                value=0>
             </fieldset>
           </tr>
         </table>
