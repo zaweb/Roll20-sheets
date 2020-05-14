@@ -1,13 +1,13 @@
-<img src="https://raw.githubusercontent.com/zaweb/Roll20-sheets/master/BtS-Title.png" width="100%" />
+<img src="https://raw.githubusercontent.com/zaweb/Roll20-sheets/master/HU.png" width="100%" />
 <h6 class="sheet-SectionHeader">Character Overview</h6>
 <header>
   <h5 class="sheet-CharacterOverview">
     Name:
     <input style="width:15%;" type="text" name="attr_Name" />
-    Gender:
-    <input style="width:10%;" type="text" name="attr_Gender" />
-    PCC:
-    <input style="width:20%;" type="text" name="attr_OCC" />
+    Real Name:
+    <input style="width:15%;" type="text" name="attr_RealName" />
+    OCC:
+    <input style="width:15%;" type="text" name="attr_OCC" />
     Level:
     <input style="width:3%;" type="number" name="attr_Level" value=1>
     Alignment:
@@ -325,11 +325,197 @@
               <td><input class="sheet-CombatInput" type="number" name="attr_A-BODY"></td>
               <td><input class="sheet-CombatInput" type="number" name="attr_A-BODY_max"></td>
             <tr>
-              <td class="sheet-CombatLabel">A.R.:</td>
+              <td class="sheet-CombatLabel">Head:</td>
               <td><input class="sheet-CombatInput" type="number" name="attr_A-HEAD"></td>
-              <td></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A-HEAD_max"></td>
             <tr>
+              <td class="sheet-CombatLabel">Left Arm:</td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A-LARM"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A-LARM_max"></td>
+            <tr>
+              <td class="sheet-CombatLabel">Right Arm:</td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A-RARM"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A-RARM_max"></td>
+            <tr>
+              <td class="sheet-CombatLabel">Left Leg:</td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A-LLEG"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A-LLEG_max"></td>
+            <tr>
+              <td class="sheet-CombatLabel">Right Leg:</td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A-RLEG"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A-RLEG_max"></td>
+            <tr>
+              <td><input class="sheet-CombatLabel" type="text" name="attr_A-MISCName1"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A-MISC1"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A-MISC1_max"></td>
+            <tr>
+              <td><input class="sheet-CombatLabel" type="text" name="attr_A-MISCName2"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A-MISC2"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A-MISC2_max"></td>
           </tbody>
+        </table>
+      </td>
+      <td>
+        <h3 class="sheet-CombatHeader">Armor 2</h3>
+        <table frame="box">
+          <thead>
+            <tr>
+              <td></td>
+              <td class="sheet-TableHeader">Current</td>
+              <td class="sheet-TableHeader">Max</td>
+            </tr>
+          </thead>
+          <tbody>
+
+            <tr>
+              <td class="sheet-CombatLabel">MainBody:</td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A2-BODY"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A2-BODY_max"></td>
+            <tr>
+              <td class="sheet-CombatLabel">Head:</td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A2-HEAD"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A2-HEAD_max"></td>
+            <tr>
+              <td class="sheet-CombatLabel">Left Arm:</td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A2-LARM"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A2-LARM_max"></td>
+            <tr>
+              <td class="sheet-CombatLabel">Right Arm:</td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A2-RARM"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A2-RARM_max"></td>
+            <tr>
+              <td class="sheet-CombatLabel">Left Leg:</td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A2-LLEG"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A2-LLEG_max"></td>
+            <tr>
+              <td class="sheet-CombatLabel">Right Leg:</td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A2-RLEG"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A2-RLEG_max"></td>
+            <tr>
+              <td><input class="sheet-CombatLabel" type="text" name="attr_A2-MISCName1"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A2-MISC1"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A2-MISC1_max"></td>
+            <tr>
+              <td><input class="sheet-CombatLabel" type="text" name="attr_A2-MISCName2"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A2-MISC2"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_A2-MISC2_max"></td>
+          </tbody>
+        </table>
+      </td>
+  </table>
+
+
+  <h6 class="sheet-SectionHeader">Power Armor/Mech</h6>
+  <table>
+    <tr>
+      <td>
+        <h3 class="sheet-CombatHeader">Hand to Hand</h3>
+        <table frame="box">
+          <tbody>
+            <tr>
+              <td colspan="2">Type: <input class="sheet-HandToHandTextInput" type="text" value="Basic"
+                  name="attr_PA-H2HType" /></td>
+            <tr>
+              <td class="sheet-CombatLabel">Attacks per Melee:</td>
+              <td><input class="sheet-CombatInput" type="number" value=0 name="attr_PATT"></td>
+            <tr>
+              <td class="sheet-CombatLabel">Initiative:</td>
+              <td><input class="sheet-CombatInput" type="number" value=0 name="attr_PINIT"></td>
+            <tr>
+              <td class="sheet-CombatLabel">Damage:</td>
+              <td><input class="sheet-CombatInput" type="number" value=0 name="attr_PDAM"></td>
+            <tr>
+              <td class="sheet-CombatLabel">Strike:</td>
+              <td><input class="sheet-CombatInput" type="number" value=0 name="attr_PSTRK"></td>
+            <tr>
+              <td class="sheet-CombatLabel">Parry:</td>
+              <td><input class="sheet-CombatInput" type="number" value=0 name="attr_PPARRY"></td>
+            <tr>
+              <td class="sheet-CombatLabel">Dodge:</td>
+              <td><input class="sheet-CombatInput" type="number" value=0 name="attr_PDODGE"></td>
+            <tr>
+              <td class="sheet-CombatLabel">Pull/Roll:</td>
+              <td><input class="sheet-CombatInput" type="number" value=0="attr_PRollWithImpact"></td>
+            <tr>
+              <td><input class="sheet-CombatLabel" type="text" name="attr_PMiscName1"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_PMiscValue1"></td>
+            <tr>
+              <td><input class="sheet-CombatLabel" type="text" name="attr_PMiscName2"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_PMiscValue2"></td>
+            <tr>
+              <td><input class="sheet-CombatLabel" type="text" name="attr_PMiscName3"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_PMiscValue3"></td>
+          </tbody>
+        </table>
+      </td>
+      <td>
+        <h3 class="sheet-CombatHeader">Armor</h3>
+        <table frame="box">
+          <thead>
+            <tr>
+              <td></td>
+              <td class="sheet-TableHeader">Current</td>
+              <td class="sheet-TableHeader">Max</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="sheet-CombatLabel">MainBody:</td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_PA-BODY"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_PA-BODY_max"></td>
+            <tr>
+              <td class="sheet-CombatLabel">Head:</td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_PA-HEAD"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_PA-HEAD_max"></td>
+            <tr>
+              <td class="sheet-CombatLabel">Left Arm:</td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_PA-LARM"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_PA-LARM_max"></td>
+            <tr>
+              <td class="sheet-CombatLabel">Right Arm:</td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_PA-RARM"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_PA-RARM_max"></td>
+            <tr>
+              <td class="sheet-CombatLabel">Left Leg:</td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_PA-LLEG"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_PA-LLEG_max"></td>
+            <tr>
+              <td class="sheet-CombatLabel">Right Leg:</td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_PA-RLEG"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_PA-RLEG_max"></td>
+            <tr>
+              <td><input class="sheet-CombatLabel" type="text" name="attr_PA-MISCName1"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_PA-MISC1"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_PA-MISC1_max"></td>
+            <tr>
+              <td><input class="sheet-CombatLabel" type="text" name="attr_PA-MISCName2"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_PA-MISC2"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_PA-MISC2_max"></td>
+          </tbody>
+        </table>
+      </td>
+      <td>
+        <h3 class="sheet-CombatHeader">Weapons</h3>
+        <table>
+          <tr>
+            <td class="sheet-TableHeader" style="width:50%;">Name</td>
+            <td class="sheet-TableHeader" style="width:10%;">Damage</td>
+            <td class="sheet-TableHeader" style="width:10%;">Ammo</td>
+            <td class="sheet-TableHeader" style="width:10%;">Strike</td>
+            <td class="sheet-TableHeader" style="width:10%;">Range</td>
+            <td class="sheet-TableHeader" style="width:10%;">Special</td>
+          </tr>
+        </table>
+        <table frame="box">
+          <tr>
+            <fieldset class="repeating_pWEAP">
+              <input float="left" type="text" style="width:50%;" name="attr_pWEAP"><input float="left" type="text"
+                style="width:10%;" name="attr_pWEAPd"><input float="left" type="text" style="width:10%;"
+                name="attr_PWEAPc"><input float="left" type="text" style="width:10%;" name="attr_PWEAPb"><input
+                float="left" type="text" style="width:10%;" name="attr_PWEAPr"><input float="left" type="text"
+                style="width:10%;" name="attr_PWEAPSpecial">
+            </fieldset>
+          </tr>
         </table>
       </td>
   </table>
@@ -373,7 +559,7 @@
         <table frame="box">
           <tbody>
             <tr>
-              <td class="sheet-MiscLabel">Dollars ($):</td>
+              <td class="sheet-MiscLabel">Coalition Credits:</td>
               <td><input class="sheet-MiscInput" type="number" name="attr_CoalitionCredits"></td>
             <tr>
               <td class="sheet-MiscLabel">NGMI Credits:</td>
@@ -398,8 +584,8 @@
         <textarea style="width:98%; height:173px; resize: none;" name="attr_Equipment"></textarea>
       </td>
   </table>
-  <h6 class="sheet-SectionHeader">Insanities</h6>
-  <textarea style="width:98%;" name="attr_Insanities"></textarea>
+  <h6 class="sheet-SectionHeader">Bionics/Cybernetics/Bio-Wizardry/Psynetics</h6>
+  <textarea style="width:98%;" name="attr_Bionics"></textarea>
   <h6 class="sheet-SectionHeader">Notes</h6>
   <textarea style="width:98%;" name="attr_Notes"></textarea>
 </div>
