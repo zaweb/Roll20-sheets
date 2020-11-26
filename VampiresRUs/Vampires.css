@@ -32,6 +32,38 @@ tr{
     padding: 0px 0px 0px 1px;
 }
 
+.sheet-TableVampirePowers {
+    color:#ff0000;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #1f1f1f;
+    padding: 0px 0px 0px 1px;
+    padding-bottom: 5px;
+}
+
+.sheet-TableVampirePowersDetail {
+    color: #ff0000;
+    font-size: 14px;
+    background-color: #1f1f1f;
+    padding: 1px 1px 1px 1px;
+    padding-bottom: 5px;
+}
+
+.sheet-TableVampirePsionicsName {
+    color:#ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #00468b;
+    padding: 0px 0px 0px 1px;
+}
+
+.sheet-TableVampirePsionicsDetail {
+    color: #ffffff;
+    font-size: 14px;
+    background-color: #00468b;
+    padding: 1px 1px 1px 1px;
+}
+
 .sheet-CharacterOverview{
     font-size: 12px;
     margin:0;
@@ -53,6 +85,27 @@ tr{
     text-align:center;
     border: 1px solid #000;
     border-radius: 15px 15px 0px 0px;
+}
+
+.sheet-PsionicsHeader{
+    font-size: 18px;
+    margin:0;
+    text-shadow: 2px 2px #000;
+    background-color: #00003f; 
+    width:100%;
+    color:#fff;
+    padding:3px 0px 3px 0px;
+    text-align:center;
+    border: 1px solid #000;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.sheet-OtherDetailsHeader{
+    color:#ff0000;
+    font-size: 24px;
+    background-color: #1f1f1f;
+    padding: 0px 0px 0px 1px;
+    text-align: center;
 }
 
 .sheet-CombatHeader{

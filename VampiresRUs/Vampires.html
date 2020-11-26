@@ -1,4 +1,5 @@
-<img src="https://raw.githubusercontent.com/zaweb/Roll20-sheets/master/HU.png" width="100%" />
+<img src="https://raw.githubusercontent.com/zaweb/Roll20-sheets/master/VampiresRUs/Vampires.png" width="100%" />
+<link rel="stylesheet" type="text/css" href="./Vampires.css" />
 <h6 class="sheet-SectionHeader">Character Overview</h6>
 <header>
   <h5 class="sheet-CharacterOverview">
@@ -7,11 +8,11 @@
     Real Name:
     <input style="width:15%;" type="text" name="attr_RealName" />
     OCC:
-    <input style="width:15%;" type="text" name="attr_OCC" />
+    <input style="width:15%;" type="text" name="attr_OCC" value="Secondary Vampire" disabled/>
     Level:
-    <input style="width:3%;" type="number" name="attr_Level" value=1>
+    <input style="width:3%;" type="number" name="attr_Level" value=4>
     Alignment:
-    <input style="width:10%;" type="text" name="attr_Alignment" />
+    <input style="width:10%;" type="text" name="attr_Alignment" value="Miscreant" disabled/>
   </h5>
   <h5 class="sheet-CharacterOverview">
     IQ:
@@ -38,9 +39,9 @@
     <input type="number" style="width:40px;" name="attr_HP_max">
 
     (S/M)DC:
-    <input type="number" style="width:40px;" name="attr_DamageCapacity">
+    <input type="number" style="width:40px;" name="attr_DamageCapacity" value="0" disabled>
     /
-    <input type="number" style="width:40px;" name="attr_DamageCapacity_max">
+    <input type="number" style="width:40px;" name="attr_DamageCapacity_max" value="0" disabled>
 
     ISP:
     <input type="number" style="width:40px;" name="attr_ISP">
@@ -52,10 +53,8 @@
     /
     <input type="number" style="width:40px;" name="attr_PPE_max">
 
-    Hunger:
-    <input type="number" style="width:40px;" name="attr_HUNGER">
-    /
-    <input type="number" style="width:40px;" name="attr_HUNGER_max" value=100>
+    Horror Factor:
+    <input type="number" style="width:40px;" name="attr_HF" value=13>
 
     Psionic Level:
     <select name="attr_PsionicLevel" style="width:10%" class="dtype">
@@ -164,8 +163,8 @@
         <table frame="box">
           <tbody>
             <tr>
-              <td colspan="2">Type: <input class="sheet-HandToHandTextInput" type="text" value="Basic"
-                  name="attr_ATT" /></td>
+              <td colspan="2">Type: <input class="sheet-HandToHandTextInput" type="text" value="Special"
+                  name="attr_ATT" disabled/></td>
             <tr>
               <td class="sheet-CombatLabel">Attacks per Melee:</td>
               <td><input class="sheet-CombatInput" type="number" value=0 name="attr_APM"></td>
@@ -185,11 +184,29 @@
               <td class="sheet-CombatLabel">Dodge:</td>
               <td><input class="sheet-CombatInput" type="number" value=0 name="attr_DODGE"></td>
             <tr>
-              <td class="sheet-CombatLabel">Pull/Roll:</td>
-              <td><input class="sheet-CombatInput" type="number" value=0="attr_ROLL"></td>
+              <td class="sheet-CombatLabel">Roll:</td>
+              <td><input class="sheet-CombatInput" type="number" value=0 name="attr_ROLL"></td>
             <tr>
+              <td class="sheet-CombatLabel">Pull Punch:</td>
+              <td><input class="sheet-CombatInput" type="number" value=0 name="attr_PULL"></td>
+            <tr>
+              <td class="sheet-CombatLabel">Disarm:</td>
+              <td><input class="sheet-CombatInput" type="number" value=0 name="attr_DISARM"></td>
+            <tr>  
               <td class="sheet-CombatLabel">Perception:</td>
-              <td><input class="sheet-CombatInput" type="number" value=0 name="attr_PERC"></td>
+              <td><input class="sheet-CombatInput" type="number" name="attr_PERC" value="2" disabled></td>
+            <tr>  
+              <td class="sheet-CombatLabel">Punch Attack:</td>
+              <td><input class="sheet-CombatInput" name="attr_PUNCH" value="2D6" disabled></td>
+            <tr>  
+              <td class="sheet-CombatLabel">Power Punch (x2):</td>
+              <td><input class="sheet-CombatInput" name="attr_POWPUNCH" value="4D6" disabled></td>
+            <tr>  
+              <td class="sheet-CombatLabel">Bite Attack:</td>
+              <td><input class="sheet-CombatInput" name="attr_BITE" value="2D6" disabled></td>
+            <tr>  
+              <td class="sheet-CombatLabel">Power Bite (x2):</td>
+              <td><input class="sheet-CombatInput" name="attr_POWBITE" value="4D6" disabled></td>
             <tr>
               <td><input class="sheet-CombatLabel" type="text" name="attr_HTHMiscName1"></td>
               <td><input class="sheet-CombatInput" type="number" name="attr_HTHMiscValue1"></td>
@@ -223,8 +240,7 @@
               <td><input class="sheet-CombatInput" type="number" name="attr_STRITUAL_max"></td>
             <tr>
               <td class="sheet-CombatLabel">Psionics:</td>
-              <td><input class="sheet-CombatInput" disabled="true" type="text" name="attr_STPSI"
-                  value="10+@{PsionicLevel}"></td>
+              <td><input class="sheet-CombatInput" disabled="true" type="text" name="attr_STPSI" value=10></td>
               <td><input class="sheet-CombatInput" type="number" name="attr_STPSI_max"></td>
             <tr>
               <td class="sheet-CombatLabel">Drug/Poison:</td>
@@ -243,7 +259,7 @@
               <td><input class="sheet-CombatInput" disabled="true" type="text" name="attr_STHF" value="Varies"></td>
               <td><input class="sheet-CombatInput" type="number" name="attr_STHF_max"></td>
             <tr>
-              <td class="sheet-CombatLabel">Death:</td>
+              <td class="sheet-CombatLabel">Coma/Death:</td>
               <td><input class="sheet-CombatInput" disabled="true" type="text" name="attr_STDEATH" value="Varies"></td>
               <td><input class="sheet-CombatInput" type="number" name="attr_STDEATH_max"></td>
             <tr>
@@ -308,284 +324,116 @@
           </tr>
         </table>
       </td>
-    <tr>
-      <td>
-        <h3 class="sheet-CombatHeader">Armor</h3>
-        <table frame="box">
-          <thead>
-            <tr>
-              <td></td>
-              <td class="sheet-TableHeader">Current</td>
-              <td class="sheet-TableHeader">Max</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="sheet-CombatLabel">MainBody:</td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A-BODY"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A-BODY_max"></td>
-            <tr>
-              <td class="sheet-CombatLabel">Head:</td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A-HEAD"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A-HEAD_max"></td>
-            <tr>
-              <td class="sheet-CombatLabel">Left Arm:</td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A-LARM"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A-LARM_max"></td>
-            <tr>
-              <td class="sheet-CombatLabel">Right Arm:</td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A-RARM"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A-RARM_max"></td>
-            <tr>
-              <td class="sheet-CombatLabel">Left Leg:</td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A-LLEG"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A-LLEG_max"></td>
-            <tr>
-              <td class="sheet-CombatLabel">Right Leg:</td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A-RLEG"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A-RLEG_max"></td>
-            <tr>
-              <td><input class="sheet-CombatLabel" type="text" name="attr_A-MISCName1"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A-MISC1"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A-MISC1_max"></td>
-            <tr>
-              <td><input class="sheet-CombatLabel" type="text" name="attr_A-MISCName2"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A-MISC2"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A-MISC2_max"></td>
-          </tbody>
-        </table>
-      </td>
-      <td>
-        <h3 class="sheet-CombatHeader">Armor 2</h3>
-        <table frame="box">
-          <thead>
-            <tr>
-              <td></td>
-              <td class="sheet-TableHeader">Current</td>
-              <td class="sheet-TableHeader">Max</td>
-            </tr>
-          </thead>
-          <tbody>
-
-            <tr>
-              <td class="sheet-CombatLabel">MainBody:</td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A2-BODY"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A2-BODY_max"></td>
-            <tr>
-              <td class="sheet-CombatLabel">Head:</td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A2-HEAD"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A2-HEAD_max"></td>
-            <tr>
-              <td class="sheet-CombatLabel">Left Arm:</td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A2-LARM"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A2-LARM_max"></td>
-            <tr>
-              <td class="sheet-CombatLabel">Right Arm:</td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A2-RARM"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A2-RARM_max"></td>
-            <tr>
-              <td class="sheet-CombatLabel">Left Leg:</td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A2-LLEG"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A2-LLEG_max"></td>
-            <tr>
-              <td class="sheet-CombatLabel">Right Leg:</td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A2-RLEG"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A2-RLEG_max"></td>
-            <tr>
-              <td><input class="sheet-CombatLabel" type="text" name="attr_A2-MISCName1"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A2-MISC1"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A2-MISC1_max"></td>
-            <tr>
-              <td><input class="sheet-CombatLabel" type="text" name="attr_A2-MISCName2"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A2-MISC2"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_A2-MISC2_max"></td>
-          </tbody>
-        </table>
-      </td>
-  </table>
-
-
-  <h6 class="sheet-SectionHeader">Power Armor/Mech</h6>
-  <table>
-    <tr>
-      <td>
-        <h3 class="sheet-CombatHeader">Hand to Hand</h3>
-        <table frame="box">
-          <tbody>
-            <tr>
-              <td colspan="2">Type: <input class="sheet-HandToHandTextInput" type="text" value="Basic"
-                  name="attr_PA-H2HType" /></td>
-            <tr>
-              <td class="sheet-CombatLabel">Attacks per Melee:</td>
-              <td><input class="sheet-CombatInput" type="number" value=0 name="attr_PATT"></td>
-            <tr>
-              <td class="sheet-CombatLabel">Initiative:</td>
-              <td><input class="sheet-CombatInput" type="number" value=0 name="attr_PINIT"></td>
-            <tr>
-              <td class="sheet-CombatLabel">Damage:</td>
-              <td><input class="sheet-CombatInput" type="number" value=0 name="attr_PDAM"></td>
-            <tr>
-              <td class="sheet-CombatLabel">Strike:</td>
-              <td><input class="sheet-CombatInput" type="number" value=0 name="attr_PSTRK"></td>
-            <tr>
-              <td class="sheet-CombatLabel">Parry:</td>
-              <td><input class="sheet-CombatInput" type="number" value=0 name="attr_PPARRY"></td>
-            <tr>
-              <td class="sheet-CombatLabel">Dodge:</td>
-              <td><input class="sheet-CombatInput" type="number" value=0 name="attr_PDODGE"></td>
-            <tr>
-              <td class="sheet-CombatLabel">Pull/Roll:</td>
-              <td><input class="sheet-CombatInput" type="number" value=0="attr_PRollWithImpact"></td>
-            <tr>
-              <td><input class="sheet-CombatLabel" type="text" name="attr_PMiscName1"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_PMiscValue1"></td>
-            <tr>
-              <td><input class="sheet-CombatLabel" type="text" name="attr_PMiscName2"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_PMiscValue2"></td>
-            <tr>
-              <td><input class="sheet-CombatLabel" type="text" name="attr_PMiscName3"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_PMiscValue3"></td>
-          </tbody>
-        </table>
-      </td>
-      <td>
-        <h3 class="sheet-CombatHeader">Armor</h3>
-        <table frame="box">
-          <thead>
-            <tr>
-              <td></td>
-              <td class="sheet-TableHeader">Current</td>
-              <td class="sheet-TableHeader">Max</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="sheet-CombatLabel">MainBody:</td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_PA-BODY"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_PA-BODY_max"></td>
-            <tr>
-              <td class="sheet-CombatLabel">Head:</td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_PA-HEAD"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_PA-HEAD_max"></td>
-            <tr>
-              <td class="sheet-CombatLabel">Left Arm:</td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_PA-LARM"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_PA-LARM_max"></td>
-            <tr>
-              <td class="sheet-CombatLabel">Right Arm:</td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_PA-RARM"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_PA-RARM_max"></td>
-            <tr>
-              <td class="sheet-CombatLabel">Left Leg:</td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_PA-LLEG"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_PA-LLEG_max"></td>
-            <tr>
-              <td class="sheet-CombatLabel">Right Leg:</td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_PA-RLEG"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_PA-RLEG_max"></td>
-            <tr>
-              <td><input class="sheet-CombatLabel" type="text" name="attr_PA-MISCName1"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_PA-MISC1"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_PA-MISC1_max"></td>
-            <tr>
-              <td><input class="sheet-CombatLabel" type="text" name="attr_PA-MISCName2"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_PA-MISC2"></td>
-              <td><input class="sheet-CombatInput" type="number" name="attr_PA-MISC2_max"></td>
-          </tbody>
-        </table>
-      </td>
-      <td>
-        <h3 class="sheet-CombatHeader">Weapons</h3>
-        <table>
-          <tr>
-            <td class="sheet-TableHeader" style="width:50%;">Name</td>
-            <td class="sheet-TableHeader" style="width:10%;">Damage</td>
-            <td class="sheet-TableHeader" style="width:10%;">Ammo</td>
-            <td class="sheet-TableHeader" style="width:10%;">Strike</td>
-            <td class="sheet-TableHeader" style="width:10%;">Range</td>
-            <td class="sheet-TableHeader" style="width:10%;">Special</td>
-          </tr>
-        </table>
-        <table frame="box">
-          <tr>
-            <fieldset class="repeating_pWEAP">
-              <input float="left" type="text" style="width:50%;" name="attr_pWEAP"><input float="left" type="text"
-                style="width:10%;" name="attr_pWEAPd"><input float="left" type="text" style="width:10%;"
-                name="attr_PWEAPc"><input float="left" type="text" style="width:10%;" name="attr_PWEAPb"><input
-                float="left" type="text" style="width:10%;" name="attr_PWEAPr"><input float="left" type="text"
-                style="width:10%;" name="attr_PWEAPSpecial">
-            </fieldset>
-          </tr>
-        </table>
-      </td>
   </table>
 </div>
 
 <!--Tab3 Powers-->
 <div class="sheet-tab-content sheet-tab3">
-  <h6 class="sheet-SectionHeader">Powers</h6>
-  <h3 class="sheet-CombatRelatedHeader">Spells/Psionics/Abilities</h3>
+  <h6 class="sheet-SectionHeader">Vampire Abilities</h6>
   <table frame="box" width="100%">
     <tr>
-      <td class="sheet-TableHeader" style="width:12%;">Name</td>
-      <td class="sheet-TableHeader" style="width:6%;">Cost</td>
-      <td class="sheet-TableHeader" style="width:6%;">Range</td>
-      <td class="sheet-TableHeader" style="width:8%;">Saving Throw</td>
-      <td class="sheet-TableHeader" style="width:8%;">Damage</td>
-      <td class="sheet-TableHeader" style="width:8%;">Duration</td>
-      <td class="sheet-TableHeader" style="width:52%;">Description</td>
+      <td class="sheet-TableHeader" style="width:20%;">Name</td>
+      <td class="sheet-TableHeader" style="width:80%;">Description</td>
+    </tr>
+    <tr>
+      <td class="sheet-TableVampirePowers" style="width:20%;">Regeneration</td>
+      <td class="sheet-TableVampirePowersDetail" style="width:80%;">Regenerate 2D6 Hit Points per round.</td>
+    </tr>
+    <tr>
+      <td class="sheet-TableVampirePowers" style="width:20%;">Blood Scent</td>
+      <td class="sheet-TableVampirePowersDetail" style="width:80%;">You can smell blood and rotting, unburied corpses up to a mile away, and can track the scent to its source. You can tell if the blood is human, D-Bee, animal, or other.</td>
+    </tr>
+    <tr>
+      <td class="sheet-TableVampirePowers" style="width:20%;">Climbing & Leaping</td>
+      <td class="sheet-TableVampirePowersDetail" style="width:80%;">No fear of heights. Can run along narrow ledges and rooftops and full speed without slipping or falling. Can climb walls, pillars, and straight up and down vertical surfaces at half speed.</td>
+    </tr>
+    <tr>
+      <td class="sheet-TableVampirePowers" style="width:20%;">Survival</td>
+      <td class="sheet-TableVampirePowersDetail" style="width:80%;">Does Not Bleed, Breathe, Eat or Radiate Heat.</td>
+    </tr>
+    <tr>
+      <td class="sheet-TableVampirePowers" style="width:20%;">Limited Invulnerability</td>
+      <td class="sheet-TableVampirePowersDetail" style="width:80%;">Normal weapons do not damage. This includes energy blasts, bullets, rail gun rounds, shrapnel, etc. Impervious to normal fires, heat, and cold. Magical fire and cold do half damage.</td>
+    </tr>
+    <tr>
+      <td class="sheet-TableVampirePowers" style="width:20%;">Nightvision</td>
+      <td class="sheet-TableVampirePowersDetail" style="width:80%;">See in total darkness up to 1,600 feet away.</td>
+    </tr>
+    <tr>
+      <td class="sheet-TableVampirePowers" style="width:20%;">Metamorphosis (requires 2 melee actions)</td>
+      <td class="sheet-TableVampirePowersDetail" style="width:80%;">1) Mist 2) Vampire Bat 3) Wolf</td>
+    </tr>
+    <tr>
+      <td class="sheet-TableVampirePowers" style="width:20%;">Summoning (I.S.P.: 2)</td>
+      <td class="sheet-TableVampirePowersDetail" style="width:80%;">1) Canines 2) Vermin</td>
     </tr>
   </table>
+  <h6 class="sheet-PsionicsHeader">Psionics</h6>
   <table frame="box" width="100%">
     <tr>
-      <fieldset class="repeating_CAST">
-        <input type="text" float="left" style="width:12%;" name="attr_CAST"><input type="text" float="left"
-          style="width:6%;" name="attr_CASTc"><input type="text" float="left" style="width:6%;" name="attr_CASTr"><input
-          type="text" float="left" style="width:8%;" name="attr_CASTst"><input type="text" float="left"
-          style="width:8%;" name="attr_CASTd"><input type="text" float="left" style="width:8%;"
-          name="attr_CASTdur"><input type="text" float="left" style="width:52%;" name="attr_CASTdesc">
-      </fieldset>
+      <td class="sheet-TableHeader" style="width:15%;">Name</td>
+      <td class="sheet-TableHeader" style="width:5%;">I.S.P.</td>
+      <td class="sheet-TableHeader" style="width:80%;">Description</td>
+    </tr>
+    <tr>
+      <td class="sheet-TableVampirePsionicsName" style="width:15%;">See Aura</td>
+      <td class="sheet-TableVampirePsionicsDetail" style="width:5%;">2</td>
+      <td class="sheet-TableVampirePsionicsDetail" style="width:80%;">.</td>
+    </tr>
+    <tr>
+      <td class="sheet-TableVampirePsionicsName" style="width:15%;">Death Trance</td>
+      <td class="sheet-TableVampirePsionicsDetail" style="width:5%;">1</td>
+      <td class="sheet-TableVampirePsionicsDetail" style="width:80%;">.</td>
+    </tr>
+    <tr>
+      <td class="sheet-TableVampirePsionicsName" style="width:15%;">Empathy</td>
+      <td class="sheet-TableVampirePsionicsDetail" style="width:5%;">4</td>
+      <td class="sheet-TableVampirePsionicsDetail" style="width:80%;">.</td>
+    </tr>
+    <tr>
+      <td class="sheet-TableVampirePsionicsName" style="width:15%;">Hypnotic Suggestion</td>
+      <td class="sheet-TableVampirePsionicsDetail" style="width:5%;">6</td>
+      <td class="sheet-TableVampirePsionicsDetail" style="width:80%;">.</td>
+    </tr>
+    <tr>
+      <td class="sheet-TableVampirePsionicsName" style="width:15%;">Induce Sleep</td>
+      <td class="sheet-TableVampirePsionicsDetail" style="width:5%;">4</td>
+      <td class="sheet-TableVampirePsionicsDetail" style="width:80%;">.</td>
+    </tr>
+    <tr>
+      <td class="sheet-TableVampirePsionicsName" style="width:15%;">Mind Block</td>
+      <td class="sheet-TableVampirePsionicsDetail" style="width:5%;">4</td>
+      <td class="sheet-TableVampirePsionicsDetail" style="width:80%;">.</td>
+    </tr>
+    <tr>
+      <td class="sheet-TableVampirePsionicsName" style="width:15%;">Presence Sense</td>
+      <td class="sheet-TableVampirePsionicsDetail" style="width:5%;">4</td>
+      <td class="sheet-TableVampirePsionicsDetail" style="width:80%;">.</td>
     </tr>
   </table>
 </div>
 
 <!--Tab3 Equipment/Notes-->
 <div class="sheet-tab-content sheet-tab4">
-  <h6 class="sheet-SectionHeader">Misc</h6>
+  <h6 class="sheet-SectionHeader">Other Details</h6>
   <table>
     <tr>
-      <td style="width:20%;">
-        <h3 class="sheet-CombatRelatedHeader">Currency</h3>
-        <table frame="box">
-          <tbody>
-            <tr>
-              <td class="sheet-MiscLabel">Coalition Credits:</td>
-              <td><input class="sheet-MiscInput" type="number" name="attr_CoalitionCredits"></td>
-            <tr>
-              <td class="sheet-MiscLabel">NGMI Credits:</td>
-              <td><input class="sheet-MiscInput" type="number" name="attr_NGMICredits"></td>
-            <tr>
-              <td class="sheet-MiscLabel">Black Market Credits:</td>
-              <td><input class="sheet-MiscInput" type="number" name="attr_BlackMarkCredits"></td>
-            <tr>
-              <td class="sheet-MiscLabel">Universal Trade Credits:</td>
-              <td><input class="sheet-MiscInput" type="number" name="attr_CREDITS"></td>
-            <tr>
-              <td class="sheet-MiscLabel">Gold/Silver:</td>
-              <td><input class="sheet-MiscInput" type="number" name="attr_GoldSilverCredits"></td>
-            <tr>
-              <td class="sheet-MiscLabel">Other:</td>
-              <td><input class="sheet-MiscInput" type="number" name="attr_OtherCredits"></td>
-          </tbody>
-        </table>
-      </td>
       <td>
-        <h3 class="sheet-CombatRelatedHeader">Equipment</h3>
+        <h3 class="sheet-OtherDetailsHeader">Biography</h3>
+        <textarea style="width:98%; height:173px; resize: none;" name="attr_Biography"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h3 class="sheet-OtherDetailsHeader">Equipment</h3>
         <textarea style="width:98%; height:173px; resize: none;" name="attr_Equipment"></textarea>
       </td>
+    </tr>
+    <tr>
+      <td>
+        <h3 class="sheet-OtherDetailsHeader">Notes</h3>
+        <textarea style="width:98%; height:173px; resize: none;" name="attr_Notes"></textarea>
+      </td>
+    </tr>
   </table>
-  <h6 class="sheet-SectionHeader">Bionics/Cybernetics/Bio-Wizardry/Psynetics</h6>
-  <textarea style="width:98%;" name="attr_Bionics"></textarea>
-  <h6 class="sheet-SectionHeader">Notes</h6>
-  <textarea style="width:98%;" name="attr_Notes"></textarea>
 </div>
